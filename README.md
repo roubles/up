@@ -29,19 +29,3 @@ $ make install
 ```
 
 Then add 'source ~/.local/bin/up.sh' to your .bashrc file or .bash_profile file.
-
-Or simply, add the following code to your .bashrc file or .bash_profile file:
-```
-function up() {
-    UP=$1
-
-    if [[ $UP =~ ^[\-0-9]+$ ]]; then
-        if ((UP<0)); then
-            UP=${UP#-}
-            cd $(echo $PWD | cut -d/ -f1-$((UP+1)))
-        else
-            cd $(printf "%0.s../" $(seq 1 ${UP}));
-        fi
-    fi
-}
-```
