@@ -23,7 +23,7 @@ $ /a/b/c/d
 ## Install
 
 ```
-$ git clone
+$ git clone https://github.com/roubles/up.git
 $ cd up
 $ make install
 ```
